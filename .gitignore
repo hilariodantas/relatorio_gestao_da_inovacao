@@ -1,0 +1,22 @@
+# Arquivos auxiliares LaTeX
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.toc
+*.out
+*.synctex.gz
+*.loq
+
+# Arquivos de backup
+*.bak
+*.backup
+*.swp
+
+# Arquivo de log específico (se aplicável)
+texput.log
