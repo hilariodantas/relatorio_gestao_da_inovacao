@@ -1,0 +1,71 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%           Modelo para criação de           %%
+%%            Relatório de estágio            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    a4paper,        % papel A4
+    12pt,           % fonte 12
+    oneside,        % impressão em apenas uma face do papel
+    english,        % hifenizações em inglês
+    brazil,         % idioma padrão do documento
+]{abntex2}
+
+% Incluir pacotes usados
+\input{lib/Preambulo}
+
+% Informações do documento e métodos criados e alterados
+\input{lib/DocumentoInfo}
+
+\begin{document}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pré-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos pré-textuais
+    \pretextual
+    
+    %espaçamento de 1.0
+    \begin{SingleSpace}
+        % Este comando imprime a Capa com informações do Preambulo.tex
+        \imprimircapa
+        
+        % Paginação em números
+        \pagenumbering{arabic}
+        
+        % Este comando imprime a Folha de Rosto com informações do Preambulo.tex
+        \imprimirfolhaderosto
+    \end{SingleSpace}
+
+    \input{pre-textuais/Listas}
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%      Elementos Textuais      %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos textuais
+    \textual
+    
+    % Tutorial
+    \input{textuais/capitulo_0/Tutorial}
+    
+    % Esses importam
+    \input{textuais/capitulo_1/Introducao}
+    \input{textuais/capitulo_2/FundamentacaoTeorica}
+    \input{textuais/capitulo_3/Atividades}
+    \input{textuais/capitulo_4/Conclusoes}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%    Elementos Pós-textuais    %%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Esse comando define as estruturas a seguir como elementos pós-textuais
+    \postextual
+    
+    % Referências
+    \bibliography{pos-textuais/Referencias}
+    
+    % Elemento Obrigatório para TCC I
+    % \input{pos-textuais/Apendice}
+    
+    % Elemento Optativo para TCC I e II
+    % \input{pos-textuais/Anexo}
+\end{document}
