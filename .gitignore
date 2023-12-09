@@ -5,6 +5,7 @@
 *.idx
 *.ilg
 *.ind
+*.loa
 *.lof
 *.log
 *.lot
